@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <input type="number" name="fizz" id="userinput">
+    <p id="demo" style="font-size: 20px; 
+    font-weight: bold;">
+        <script>
+        var inpt = document.querySelector('#userinput')
+        inpt.addEventListener('input', function () {
+	    let val = inpt.valueAsNumber
+        for (let i = 1; i <= val; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                document.getElementById("demo").innerHTML ="FizzBuzz";
+                console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            document.getElementById("demo").innerHTML ="Fizz";
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            document.getElementById("demo").innerHTML ="Buzz";
+            console.log("Buzz");
+        } else {
+            document.getElementById("demo").innerHTML =i;
+            console.log(i)
+        }
+        }
+    });
+    </script>
+</body>
+</html>
